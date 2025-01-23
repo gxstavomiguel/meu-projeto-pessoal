@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AgenteService } from '../services/agente.service';
+import { Agente } from '../model/agente';
 
 @Component({
   selector: 'app-create',
@@ -11,7 +12,7 @@ import { AgenteService } from '../services/agente.service';
 
 
 export class CreateComponent {
-  agente = { nome: '', skill: '', tipo: ''};
+  agente = { id: 0 , nome: '', skill: '', tipo: ''};
 
   constructor(private agenteService: AgenteService) {}
 
@@ -26,11 +27,13 @@ export class CreateComponent {
           console.error('Erro ao salvar o agente:', error);
           const errorMSG = error.error?.message || 'Erro desconhecido';
           alert(` Erro ao cadastrar o agente. Tente novamente. ${errorMSG}`);
+
         }
       ); 
         }
   resetForm() {
     this.agente = {
+      id: 0,
       nome: '',
       skill: '',
       tipo: ''

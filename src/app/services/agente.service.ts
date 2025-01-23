@@ -1,6 +1,7 @@
 import { HttpClient,  } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Agente } from '../model/agente';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,8 @@ export class AgenteService {
 
   constructor(private http: HttpClient){}
 
-  createAgente(agente: any): Observable<any>{
-    return this.http.post<any>(`${this.API}save`, agente)
+  createAgente(agente: Agente): Observable<Agente> {
+    return this.http.post<Agente>(`${this.API}save`, agente);
   }
 
   readAgentes(): Observable<any[]> {
@@ -30,4 +31,5 @@ export class AgenteService {
   deleteAgente(id: number): Observable<any> {
     return this.http.delete<any>(`${this.API}delete/${id}`);
   }
+
 }

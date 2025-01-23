@@ -1,1 +1,26 @@
-<h1>read</h1>
+<div>
+<h1>Exibindo Agentes R6</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Skill</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let agente of listaAgentes">
+            <td>{{agente.id}}</td>
+            <td>{{agente.nome}}</td>
+            <td>{{agente.skill}}</td>
+            <td>{{agente.tipo}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<button (click)="read()">EXIBIR AGENTES</button>
+</div>

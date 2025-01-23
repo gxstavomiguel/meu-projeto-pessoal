@@ -1,1 +1,11 @@
-<p>update works!</p>
+<div>
+<h6>UPDATE</h6>
+
+
+<input type="number" [(ngModel)]="agente.id" placeholder="ID"/>
+<input type="text" [(ngModel)]="agente.nome" placeholder="nome"/>
+<input type="text" [(ngModel)]="agente.skill" placeholder="skill"/>
+<input type="text" [(ngModel)]="agente.tipo" placeholder="tipo"/>
+<button (click)="update()">Atualizar Agente</button>
+
+</div>
