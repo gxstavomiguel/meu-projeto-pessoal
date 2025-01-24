@@ -4,6 +4,7 @@ import { AgenteService } from '../services/agente.service';
 
 @Component({
   selector: 'app-delete',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './delete.component.html',
   styleUrls: ['./delete.component.scss'] // Corrigido de `styleUrl` para `styleUrls`

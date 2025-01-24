@@ -1,0 +1,11 @@
+input {
+    width: 250px;
+    height: 30px;
+    background-color: rgb(163, 157, 157);
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+input::placeholder {
+    color: black;
+}

@@ -5,6 +5,7 @@ import { Agente } from '../model/agente';
 
 @Component({
   selector: 'app-create',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './create.component.html',
   styleUrl: './create.component.scss'

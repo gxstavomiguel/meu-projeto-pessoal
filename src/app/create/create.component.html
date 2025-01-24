@@ -1,15 +1,14 @@
 <h1>Cadastro de Agentes R6</h1>
 <div class="card-main">
 
-  <label mdbLabel class="form-label" for="form1">Nome</label>
-  <input mdbInput type="text" id="nome" class="form-control" [(ngModel)]="agente.nome" />
+  <label  class="form-label" for="form1">Nome:</label>
+  <input  type="text" id="nome" class="form-control" [(ngModel)]="agente.nome" />
   <br>
-  <label mdbLabel class="form-label" for="form1">Skill</label>
-  <input mdbInput type="text" id="skill" class="form-control" [(ngModel)]="agente.skill" />
+  <label  class="form-label" for="form1">Skill:</label>
+  <input  type="text" id="skill" class="form-control" [(ngModel)]="agente.skill" />
   <br>
-  <label mdbLabel class="form-label" for="form1">Tipo</label>
-  <input mdbInput type="text" id="tipo" class="form-control" [(ngModel)]="agente.tipo" />
-  <br>
+  <label  class="form-label" for="form1">Tipo:</label>
+  <input  type="text" id="tipo" class="form-control" [(ngModel)]="agente.tipo" />
   <br>
   <button type="button" class="btn btn-primary btn-rounded" mdbRipple (click)="save()">Salvar</button>
 

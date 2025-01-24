@@ -1,8 +1,23 @@
-.card-main{
-    max-width: 700px;
-    background-color: rgb(97, 97, 214);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// .card-main{
+//     max-width: 700px;
+//     background-color: rgb(97, 97, 214);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
+// }
+
+
+.card-main{
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(230, 171, 100);
+}
+
+button{
+    max-width: 100px;
+    height: 25px;
+    background-color: rgb(130, 240, 130);
+    border: solid 1px;
 }

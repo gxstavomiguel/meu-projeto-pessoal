@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CrudComponent } from './crud.component';
+import { InputBuscaComponent } from './input-busca.component';
 
-describe('CrudComponent', () => {
-  let component: CrudComponent;
-  let fixture: ComponentFixture<CrudComponent>;
+describe('InputBuscaComponent', () => {
+  let component: InputBuscaComponent;
+  let fixture: ComponentFixture<InputBuscaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CrudComponent]
+      imports: [InputBuscaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CrudComponent);
+    fixture = TestBed.createComponent(InputBuscaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

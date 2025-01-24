@@ -1,5 +1,5 @@
 import { HttpClient,  } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Agente } from '../model/agente';
 
@@ -10,7 +10,8 @@ export class AgenteService {
 
   private API = 'http://localhost:8080/api/agente/';
 
-  constructor(private http: HttpClient){}
+  //Nova forma de consumir o HttpClient atráves de injeção de depedência
+  private http = inject(HttpClient)
 
   createAgente(agente: Agente): Observable<Agente> {
     return this.http.post<Agente>(`${this.API}save`, agente);
