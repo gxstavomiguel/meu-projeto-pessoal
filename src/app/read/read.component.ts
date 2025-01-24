@@ -2,18 +2,18 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AgenteService } from '../services/agente.service';
 import { Agente } from '../model/agente';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-read',
   standalone: true,
-  imports: [CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './read.component.html',
   styleUrl: './read.component.scss'
 })
 export class ReadComponent implements OnInit {
   agente = { id: 0 , nome: '', skill: '', tipo: ''};
   msg : string = '';
-  // id: number = 0; 
 
   listaAgentes: Agente[] = [];
   constructor(private agenteService: AgenteService){}
@@ -26,7 +26,7 @@ export class ReadComponent implements OnInit {
     this.agenteService.readAgentes().subscribe({
       next: (dados: Agente[]) => {
         this.listaAgentes = dados;
-        // console.table(this.listaAgentes)
+        console.table(this.listaAgentes)
         this.listaAgentes = dados.map(agente => ({ ...agente, isEditing: false}));
         console.log('Até essa parte está funcionando!')
       },
@@ -40,7 +40,7 @@ export class ReadComponent implements OnInit {
     this.agenteService.editAgente(this.agente.id, this.agente).subscribe({
       next: () => {
         this.msg = 'Agente atualizado!';
-        // this.listaAgentes = this.listaAgentes.filter((agente) => { agente.id !== id})
+        this.read();
       },
       error: (err) => {
         console.error('Aconteceu algum erro!', err);
@@ -58,11 +58,6 @@ export class ReadComponent implements OnInit {
         console.error('Erro ao deletar agente', err);
       }
     });
-  }
-
-  enableEdit(agente: Agente){
-    this.listaAgentes.forEach(a => (a.isEditing = false));
-    agente.isEditing = true;
   }
 
 }

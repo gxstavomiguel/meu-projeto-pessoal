@@ -4,7 +4,6 @@ export class Agente {
     nome! : string;
     skill! : string;
     tipo! : string;
-    isEditing? : boolean;
 
     constructor(id: number, nome: string, skill: string, tipo: string){
         this.id = id;

@@ -25,7 +25,7 @@ export class AgenteService {
     return this.http.get<any[]>(`${this.API}findByNome/${nome}`);
   }
 
-  editAgente(id: number, agente: any): Observable<any>{
+  editAgente(id: number, agente: Agente): Observable<any>{
     return this.http.put<any>(`${this.API}update/${id}`, agente);
   }
 

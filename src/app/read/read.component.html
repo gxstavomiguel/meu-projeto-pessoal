@@ -7,13 +7,13 @@
             <th>Nome</th>
             <th>Skill</th>
             <th>Tipo</th>
-            <th>Editar</th>
-            <th>Deletar</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
     </thead>
 
     <tbody>
-        <tr *ngFor="let agente of listaAgentes" (dblclick)="enableEdit(agente)">
+        <tr *ngFor="let agente of listaAgentes">
             <td>{{agente.id}}</td>
             <td>{{agente.nome}}</td>
             <td>{{agente.skill}}</td>
@@ -22,8 +22,12 @@
             <td> <button class="btn-delete" (click)="delete(agente.id)">Delete</button> </td>
         </tr>
     </tbody>
+
+    
+
 </table>
 
 <br>
+
 <button class="btn-read"  (click)="read()">Show</button>
 </div>
